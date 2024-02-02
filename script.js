@@ -9,10 +9,6 @@ const descriptionElement = document.getElementById('description');
 const coordinatesEle = document.getElementById('coordinates');
 
 searchButton.addEventListener('click', () =>{
-    coordinatesEle.textContent = 'Coordinates: ';
-    locationElement.textContent = 'Location: ';
-    tempElement.textContent = 'Temperature: ';
-    descriptionElement.textContent = 'Description: ';
     const location = locationInput.value;
     if(location) {
         fetchWeather(location);
@@ -26,10 +22,10 @@ function fetchWeather(location) {
         .then(response => response.json())
         .then(data => {
             console.log(data)
-            coordinatesEle.textContent += data.coord.lon + ' ' + data.coord.lat;
-            locationElement.textContent += data.name;
-            tempElement.textContent += `${Math.round(data.main.temp)}°C`;
-            descriptionElement.textContent += data.weather[0].description;
+            coordinatesEle.textContent = data.coord.lon + ',' + data.coord.lat;
+            locationElement.textContent = data.name;
+            tempElement.textContent = `${Math.round(data.main.temp)}°C`;
+            descriptionElement.textContent = data.weather[0].description;
         })
         
         .catch(error => {

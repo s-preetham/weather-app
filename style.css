@@ -1,0 +1,46 @@
+* {
+    font-family: 'Source Code Pro', monospace;
+}
+
+body {
+    background-image: url('sunny.jpg');
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+    font-family: 'Source Code Pro', monospace;
+    font-weight: 800;
+    font-size: 30px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    height: 100vh;
+}
+
+.container {
+    border: 2px solid rgb(0, 0, 0);
+    padding: 20px;
+    margin: 40px;
+    background-color: antiquewhite;
+    width: 400px;
+    border-radius: 10px;
+    height: 400px;
+    text-align: center;
+}
+
+input[type="text"] {
+    border: 2px solid rgb(0, 0, 0);
+    border-radius: 10px;
+    padding: 20px;
+}
+
+button {
+    border: 2px solid rgb(0, 0, 0);
+    border-radius: 10px;
+    padding: 20px;
+    cursor: pointer;
+}
+
+.weather-info {
+    margin-top: 40px;
+    font-size: 20px;
+}
+
